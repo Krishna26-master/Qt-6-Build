@@ -174,4 +174,4 @@ jobs:
             Note: For native Zen 3 optimizations, rebuild locally with:
             export CFLAGS="-O3 -march=native -mtune=native"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
