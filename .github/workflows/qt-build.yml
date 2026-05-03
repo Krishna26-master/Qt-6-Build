@@ -67,6 +67,7 @@ jobs:
             libharfbuzz-dev libpng-dev libjpeg-dev
       - name: Build Qt base
         run: |
+          VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qtbase-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
@@ -80,6 +81,7 @@ jobs:
           cmake --install .
       - name: Build Qt declarative
         run: |
+          VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qtdeclarative-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
@@ -88,6 +90,7 @@ jobs:
           cmake --install build
       - name: Build Qt wayland
         run: |
+          VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qtwayland-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
@@ -96,6 +99,7 @@ jobs:
           cmake --install build
       - name: Build Qt svg
         run: |
+          VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qtsvg-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
@@ -104,6 +108,7 @@ jobs:
           cmake --install build
       - name: Build Qt tools
         run: |
+          VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qttools-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
@@ -112,6 +117,7 @@ jobs:
           cmake --install build
       - name: Build Qt shadertools
         run: |
+          VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qtshadertools-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
