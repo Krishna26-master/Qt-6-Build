@@ -26,36 +26,22 @@ jobs:
           
           mkdir -p qt-sources
           cd qt-sources
-          
-          echo "Downloading Qt $VERSION..."
           for mod in qtbase qtdeclarative qtwayland qtsvg qtshadertools; do
-            echo "Downloading $mod..."
             curl -sL -o "${mod}-everywhere-src-$VERSION.tar.xz" "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
-            if file "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null | grep -q "XZ compressed"; then
-              echo "  ok"
-            else
-              echo "  FAILED"
-              exit 1
-            fi
           done
       - name: Extract sources
         run: |
           cd qt-sources
           for f in qt*-everywhere-src-*.tar.xz; do tar -xf "$f"; done
-          ls -la
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             build-essential cmake ninja-build \
-            libgl1-mesa-dev \
-            libxcb1-dev libxcb-xinput-dev \
-            libxkbcommon-dev libxkbcommon-x11-dev \
-            libx11-xcb-dev libegl1 \
-            libinput-dev libudev-dev \
-            libdbus-1-dev \
-            libfontconfig1-dev libfreetype6-dev \
-            libharfbuzz-dev libpng-dev libjpeg-dev
+            libgl1-mesa-dev libxcb1-dev libxcb-xinput-dev \
+            libxkbcommon-dev libxkbcommon-x11-dev libx11-xcb-dev libegl1 \
+            libinput-dev libudev-dev libdbus-1-dev \
+            libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libpng-dev libjpeg-dev
       - name: Build Qt base
         run: |
           VERSION="${{ github.event.inputs.qt_version }}"
@@ -66,8 +52,7 @@ jobs:
             -prefix $RUNNER_TEMP/Qt6-built \
             -release -optimize-size -no-widgets \
             -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-mimer \
-            -no-dbus -no-openssl \
-            -no-qdoc
+            -no-dbus -no-openssl
           cmake --build . --parallel
           cmake --install .
       - name: Build Qt declarative
@@ -122,6 +107,5 @@ jobs:
             - Built on: Ubuntu 24.04 LTS
             - Modules: qtbase, qtdeclarative, qtwayland, qtsvg, qtshadertools
             - Optimizations: -O3 -pipe
-            - Note: qttools excluded (requires libclang)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
