@@ -81,13 +81,16 @@ jobs:
           cmake --build build --parallel
           cmake --install build
 
-      - name: Build Qt wayland
+      - name: Build Qt wayland (with client support)
         run: |
           VERSION="${{ env.QT_VERSION }}"
           cd qt-sources/qtwayland-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
+          cmake -G Ninja \
+            -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built \
+            -DQT_BUILD_WAYLAND_CLIENT=ON \
+            -B build -S .
           cmake --build build --parallel
           cmake --install build
 
