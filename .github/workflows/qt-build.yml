@@ -100,6 +100,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: qt${{ github.event.inputs.qt_version }}-minimal.tar.gz
+          tag_name: v${{ github.event.inputs.qt_version }}
           name: Qt ${{ github.event.inputs.qt_version }} Build
           body: |
             Minimal Qt build for Linux x86_64
