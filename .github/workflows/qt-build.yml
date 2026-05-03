@@ -37,7 +37,7 @@ jobs:
           
           for mod in $MODULES; do
             echo "Downloading $mod..."
-            curl -sLO "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
+            curl -sL -O "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
           done
       
       - name: Extract sources
@@ -77,7 +77,7 @@ jobs:
           cd qt-sources/qtbase-everywhere-src-*
           # CPU optimizations (generic x86_64 for GitHub, use -march=native locally)
           export CFLAGS="-O3 -pipe"
-          export CXXFLAGS="-O3 -pipe"
+export CXXFLAGS="-O3 -pipe"
           export QT_GCC_BUILD_OPTIMIZE="3"
           ./configure \
             -prefix $RUNNER_TEMP/Qt6-built \
