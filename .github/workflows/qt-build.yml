@@ -28,7 +28,7 @@ jobs:
           cd qt-sources
           
           echo "Downloading Qt $VERSION..."
-          for mod in qtbase qtdeclarative qtwayland qtsvg qttools qtshadertools; do
+          for mod in qtbase qtdeclarative qtwayland qtsvg qtshadertools; do
             echo "Downloading $mod..."
             curl -sL -o "${mod}-everywhere-src-$VERSION.tar.xz" "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
             if file "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null | grep -q "XZ compressed"; then
@@ -55,12 +55,7 @@ jobs:
             libinput-dev libudev-dev \
             libdbus-1-dev \
             libfontconfig1-dev libfreetype6-dev \
-            libharfbuzz-dev libpng-dev libjpeg-dev \
-            libclang-17-dev
-      - name: Remove broken LLVM config
-        run: |
-          # Prevent Qt from finding broken libclang
-          sudo rm -f /usr/lib/llvm-17/lib/cmake/clang/ClangTargets.cmake 2>/dev/null || true
+            libharfbuzz-dev libpng-dev libjpeg-dev
       - name: Build Qt base
         run: |
           VERSION="${{ github.event.inputs.qt_version }}"
@@ -71,7 +66,8 @@ jobs:
             -prefix $RUNNER_TEMP/Qt6-built \
             -release -optimize-size -no-widgets \
             -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-mimer \
-            -no-dbus -no-openssl
+            -no-dbus -no-openssl \
+            -no-qdoc
           cmake --build . --parallel
           cmake --install .
       - name: Build Qt declarative
@@ -101,15 +97,6 @@ jobs:
           cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
           cmake --build build --parallel
           cmake --install build
-      - name: Build Qt tools
-        run: |
-          VERSION="${{ github.event.inputs.qt_version }}"
-          cd qt-sources/qttools-everywhere-src-$VERSION
-          export CFLAGS="-O3 -pipe"
-          export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
-          cmake --build build --parallel
-          cmake --install build
       - name: Build Qt shadertools
         run: |
           VERSION="${{ github.event.inputs.qt_version }}"
@@ -133,7 +120,8 @@ jobs:
             Minimal Qt build for Linux x86_64
             - Qt: ${{ github.event.inputs.qt_version }}
             - Built on: Ubuntu 24.04 LTS
-            - Modules: qtbase, qtdeclarative, qtwayland, qtsvg, qttools, qtshadertools
+            - Modules: qtbase, qtdeclarative, qtwayland, qtsvg, qtshadertools
             - Optimizations: -O3 -pipe
+            - Note: qttools excluded (requires libclang)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
