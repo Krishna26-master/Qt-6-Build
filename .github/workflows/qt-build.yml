@@ -1,5 +1,4 @@
 name: Build Qt 6.8.3
-
 on:
   workflow_dispatch:
     inputs:
@@ -12,188 +11,84 @@ on:
           - '6.8.3'
           - '6.8.2'
           - '6.8.1'
-      modules:
-        description: 'Modules to build (comma-separated)'
-        required: true
-        default: 'qtbase,qtdeclarative,qtwayland,qtsvg,qttools,qtshadertools'
-        type: string
-
 jobs:
   build:
     runs-on: ubuntu-24.04
-
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Download Qt sources
         run: |
           VERSION="${{ github.event.inputs.qt_version }}"
-          # URL structure: /qt/6.8/6.8.3/ (major.minor/version/)
           MAJOR_MINOR="${VERSION%.*}"
           BASE_URL="https://download.qt.io/official_releases/qt/$MAJOR_MINOR/$VERSION/submodules"
-          
           mkdir -p qt-sources
           cd qt-sources
-          
-          echo "Downloading Qt $VERSION modules from $BASE_URL..."
-          for mod in qtbase qtdeclarative qtwayland qtsvg qttools qtshadertools; do
-            echo "Downloading $mod..."
+          for mod in qtbase qtdeclarative qtwayland qtsvg qtshadertools; do
             curl -sL -o "${mod}-everywhere-src-$VERSION.tar.xz" "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
-            # Verify download succeeded
-            if file "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null | grep -q "XZ compressed"; then
-              echo "✓ $mod downloaded"
-            else
-              echo "✗ Failed to download $mod"
-              ls -la "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null || true
-              exit 1
-            fi
           done
-          
-          ls -la
-
       - name: Extract sources
         run: |
           cd qt-sources
-          echo "Extracting sources..."
-          for f in qt*-everywhere-src-*.tar.xz; do
-            echo "Extracting $f..."
-            tar -xf "$f"
-          done
-          ls -la
-          echo "Verifying extracted directories..."
-          for dir in qt*-everywhere-src-*; do
-            if [ -d "$dir" ]; then
-              echo "✓ $dir extracted"
-            else
-              echo "✗ $dir not found"
-              exit 1
-            fi
-          done
-
+          for f in qt*-everywhere-src-*.tar.xz; do tar -xf "$f"; done
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            build-essential \
-            cmake \
-            ninja-build \
-            libgl1-mesa-dev \
-            libxcb1-dev \
-            libxcb-xinput-dev \
-            libxkbcommon-dev \
-            libxkbcommon-x11-dev \
-            libx11-xcb-dev \
-            libegl1 \
-            libinput-dev \
-            libudev-dev \
-            libdbus-1-dev \
-            libfontconfig1-dev \
-            libfreetype6-dev \
-            libharfbuzz-dev \
-            libpng-dev \
-            libjpeg-dev
-
+          sudo apt-get install -y build-essential cmake ninja-build libgl1-mesa-dev libxcb1-dev libxcb-xinput-dev libxkbcommon-dev libxkbcommon-x11-dev libx11-xcb-dev libegl1 libinput-dev libudev-dev libdbus-1-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libpng-dev libjpeg-dev
       - name: Build Qt base
         run: |
-          cd qt-sources/qtbase-everywhere-src-*
-          # CPU optimizations (generic x86_64 for GitHub, use -march=native locally)
-export CFLAGS="-O3 -pipe"
+          VERSION="${{ github.event.inputs.qt_version }}"
+          cd qt-sources/qtbase-everywhere-src-$VERSION
+          export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          export QT_GCC_BUILD_OPTIMIZE="3"
-          ./configure \
-            -prefix $RUNNER_TEMP/Qt6-built \
-            -release \
-            -optimize-size \
-            -no-widgets \
-            -no-sql-db2 \
-            -no-sql-ibase \
-            -no-sql-mysql \
-            -no-sql-oci \
-            -no-sql-odbc \
-            -no-sql-psql \
-            -no-sql-mimer \
-            -no-dbus \
-            -no-openssl
+          ./configure -prefix $RUNNER_TEMP/Qt6-built -release -optimize-size -no-widgets -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-mimer -no-dbus -no-openssl
           cmake --build . --parallel
           cmake --install .
-
       - name: Build Qt declarative
         run: |
-          cd qt-sources/qtdeclarative-everywhere-src-*
+          VERSION="${{ github.event.inputs.qt_version }}"
+          cd qt-sources/qtdeclarative-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja \
-            -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built \
-            -B build -S .
+          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
           cmake --build build --parallel
           cmake --install build
-
       - name: Build Qt wayland
         run: |
-          cd qt-sources/qtwayland-everywhere-src-*
+          VERSION="${{ github.event.inputs.qt_version }}"
+          cd qt-sources/qtwayland-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja \
-            -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built \
-            -B build -S .
+          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
           cmake --build build --parallel
           cmake --install build
-
       - name: Build Qt svg
         run: |
-          cd qt-sources/qtsvg-everywhere-src-*
+          VERSION="${{ github.event.inputs.qt_version }}"
+          cd qt-sources/qtsvg-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja \
-            -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built \
-            -B build -S .
+          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
           cmake --build build --parallel
           cmake --install build
-
-      - name: Build Qt tools
-        run: |
-          cd qt-sources/qttools-everywhere-src-*
-          export CFLAGS="-O3 -pipe"
-          export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja \
-            -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built \
-            -B build -S .
-          cmake --build build --parallel
-          cmake --install build
-
       - name: Build Qt shadertools
         run: |
-          cd qt-sources/qtshadertools-everywhere-src-*
+          VERSION="${{ github.event.inputs.qt_version }}"
+          cd qt-sources/qtshadertools-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja \
-            -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built \
-            -B build -S .
+          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
           cmake --build build --parallel
           cmake --install build
-
       - name: Package Qt
         run: |
           cd $RUNNER_TEMP
-          tar -cvzf qt${{ github.event.inputs.qt_version }}-minimal.tar.gz Qt6-built/
+          tar -czf qt${{ github.event.inputs.qt_version }}-minimal.tar.gz Qt6-built/
+          cp qt${{ github.event.inputs.qt_version }}-minimal.tar.gz ${{ github.workspace }}/
           ls -lh qt*-minimal.tar.gz
-
-      - name: Upload to Release
-        uses: softprops/action-gh-release@v2
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
-          files: qt${{ github.event.inputs.qt_version }}-minimal.tar.gz
-          name: Qt ${{ github.event.inputs.qt_version }} Build
-          body: |
-            Minimal Qt build for Linux x86_64
-            - Qt version: ${{ github.event.inputs.qt_version }}
-            - Built on: Ubuntu 24.04 LTS
-            - Modules: qtbase, qtdeclarative, qtwayland, qtsvg, qttools, qtshadertools
-            - CPU optimizations: -O3 (generic x86_64)
-            - Build: -release -optimize-size
-            - Prefix: /home/runner/Qt6-built
-
-            Note: For native Zen 3 optimizations, rebuild locally with:
-            export CFLAGS="-O3 -march=native -mtune=native"
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          name: qt${{ github.event.inputs.qt_version }}-minimal.tar.gz
+          path: qt${{ github.event.inputs.qt_version }}-minimal.tar.gz
