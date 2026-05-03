@@ -26,24 +26,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-- name: Download Qt sources
+      - name: Download Qt sources
         run: |
           VERSION="${{ github.event.inputs.qt_version }}"
-          BASE_URL="https://download.qt.io/official_releases/qt/$VERSION/submodules"
+          # URL structure: /qt/6.8/6.8.3/ (major.minor/version/)
+          MAJOR_MINOR="${VERSION%.*}"
+          BASE_URL="https://download.qt.io/official_releases/qt/$MAJOR_MINOR/$VERSION/submodules"
           
           mkdir -p qt-sources
           cd qt-sources
           
-          echo "Downloading Qt $VERSION modules..."
+          echo "Downloading Qt $VERSION modules from $BASE_URL..."
           for mod in qtbase qtdeclarative qtwayland qtsvg qttools qtshadertools; do
             echo "Downloading $mod..."
             curl -sL -o "${mod}-everywhere-src-$VERSION.tar.xz" "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
-            # Verify download succeeded (not an error page)
-            if file "$mod"-everywhere-src-"$VERSION".tar.xz | grep -q "XZ compressed"; then
-              echo "✓ $mod downloaded successfully"
+            # Verify download succeeded
+            if file "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null | grep -q "XZ compressed"; then
+              echo "✓ $mod downloaded"
             else
               echo "✗ Failed to download $mod"
-              cat "$mod"-everywhere-src-"$VERSION".tar.xz | head -5
+              ls -la "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null || true
               exit 1
             fi
           done
