@@ -29,22 +29,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Cache Qt sources
-        id: cache-sources
-        uses: actions/cache@v4
-        with:
-          path: qt-sources
-          key: qt-sources-${{ env.QT_VERSION }}-${{ hashFiles('.github/workflows/qt-build.yml') }}
-
-      - name: Download Qt sources (if not cached)
-        if: steps.cache-sources.outputs.cache-hit != 'true'
+      - name: Download Qt sources
         run: |
           VERSION="${{ env.QT_VERSION }}"
           MAJOR_MINOR="${VERSION%.*}"
           BASE_URL="https://download.qt.io/official_releases/qt/$MAJOR_MINOR/$VERSION/submodules"
           mkdir -p qt-sources
           cd qt-sources
-          for mod in qtbase qtdeclarative qtwayland qtsvg qtshadertools; do
+          # CORRECT ORDER: qtbase, qtshadertools, qtdeclarative, qtwayland, qtsvg
+          for mod in qtbase qtshadertools qtdeclarative qtwayland qtsvg; do
             curl -sL -o "${mod}-everywhere-src-$VERSION.tar.xz" "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
           done
 
@@ -53,37 +46,32 @@ jobs:
           cd qt-sources
           for f in qt*-everywhere-src-*.tar.xz; do tar -xf "$f"; done
 
-      - name: Cache system dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/Qt6-built
-          key: qt-built-${{ env.QT_VERSION }}-${{ github.sha }}
-
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            build-essential cmake ninja-build \
-            libgl1-mesa-dev libxcb1-dev libxcb-xinput-dev \
-            libxkbcommon-dev libxkbcommon-x11-dev libx11-xcb-dev libegl1 \
-            libinput-dev libudev-dev libdbus-1-dev \
-            libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libpng-dev libjpeg-dev
+          sudo apt-get install -y build-essential cmake ninja-build libgl1-mesa-dev libxcb1-dev libxcb-xinput-dev libxkbcommon-dev libxkbcommon-x11-dev libx11-xcb-dev libegl1 libinput-dev libudev-dev libdbus-1-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libpng-dev libjpeg-dev
 
       - name: Build Qt base
-        if: steps.cache-sources.outputs.cache-hit != 'true'
         run: |
           VERSION="${{ env.QT_VERSION }}"
           cd qt-sources/qtbase-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          ./configure -prefix $RUNNER_TEMP/Qt6-built -release -optimize-size -no-widgets \
-            -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-mimer \
-            -no-dbus -no-openssl
+          ./configure -prefix $RUNNER_TEMP/Qt6-built -release -optimize-size -no-widgets -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-mimer -no-dbus -no-openssl
           cmake --build . --parallel
           cmake --install .
 
-      - name: Build Qt declarative
-        if: steps.cache-sources.outputs.cache-hit != 'true'
+      - name: Build Qt shadertools (MUST be before qtdeclarative)
+        run: |
+          VERSION="${{ env.QT_VERSION }}"
+          cd qt-sources/qtshadertools-everywhere-src-$VERSION
+          export CFLAGS="-O3 -pipe"
+          export CXXFLAGS="-O3 -pipe"
+          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
+          cmake --build build --parallel
+          cmake --install build
+
+      - name: Build Qt declarative (now has qsb tool)
         run: |
           VERSION="${{ env.QT_VERSION }}"
           cd qt-sources/qtdeclarative-everywhere-src-$VERSION
@@ -94,7 +82,6 @@ jobs:
           cmake --install build
 
       - name: Build Qt wayland
-        if: steps.cache-sources.outputs.cache-hit != 'true'
         run: |
           VERSION="${{ env.QT_VERSION }}"
           cd qt-sources/qtwayland-everywhere-src-$VERSION
@@ -105,21 +92,9 @@ jobs:
           cmake --install build
 
       - name: Build Qt svg
-        if: steps.cache-sources.outputs.cache-hit != 'true'
         run: |
           VERSION="${{ env.QT_VERSION }}"
           cd qt-sources/qtsvg-everywhere-src-$VERSION
-          export CFLAGS="-O3 -pipe"
-          export CXXFLAGS="-O3 -pipe"
-          cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
-          cmake --build build --parallel
-          cmake --install build
-
-      - name: Build Qt shadertools
-        if: steps.cache-sources.outputs.cache-hit != 'true'
-        run: |
-          VERSION="${{ env.QT_VERSION }}"
-          cd qt-sources/qtshadertools-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
           cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$RUNNER_TEMP/Qt6-built -B build -S .
@@ -131,7 +106,6 @@ jobs:
           cd $RUNNER_TEMP
           tar -czf qt${{ env.QT_VERSION }}-minimal.tar.gz Qt6-built/
           cp qt${{ env.QT_VERSION }}-minimal.tar.gz ${{ github.workspace }}/
-          ls -lh qt*-minimal.tar.gz
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
