@@ -21,25 +21,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Download Qt sources
         run: |
           MODULES="qtbase qtdeclarative qtwayland qtsvg qttools qtshadertools"
           VERSION="${{ github.event.inputs.qt_version }}"
           BASE_URL="https://download.qt.io/official_releases/qt/$VERSION/submodules"
-          
+
           mkdir -p qt-sources
           cd qt-sources
-          
+
           for mod in $MODULES; do
             echo "Downloading $mod..."
-            curl -sLO "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
+            curl -sL -O "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
           done
-      
+
       - name: Extract sources
         run: |
           cd qt-sources
@@ -48,7 +48,7 @@ jobs:
             tar -xf "$f"
           done
           ls -la
-      
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
@@ -71,7 +71,7 @@ jobs:
             libharfbuzz-dev \
             libpng-dev \
             libjpeg-dev
-      
+
       - name: Build Qt base
         run: |
           cd qt-sources/qtbase-everywhere-src-*
@@ -95,7 +95,7 @@ jobs:
             -no-openssl
           cmake --build . --parallel
           cmake --install .
-      
+
       - name: Build Qt declarative
         run: |
           cd qt-sources/qtdeclarative-everywhere-src-*
@@ -106,7 +106,7 @@ jobs:
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt wayland
         run: |
           cd qt-sources/qtwayland-everywhere-src-*
@@ -117,7 +117,7 @@ jobs:
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt svg
         run: |
           cd qt-sources/qtsvg-everywhere-src-*
@@ -128,7 +128,7 @@ jobs:
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt tools
         run: |
           cd qt-sources/qttools-everywhere-src-*
@@ -139,7 +139,7 @@ jobs:
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt shadertools
         run: |
           cd qt-sources/qtshadertools-everywhere-src-*
@@ -150,13 +150,13 @@ jobs:
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Package Qt
         run: |
           cd $RUNNER_TEMP
           tar -cvzf qt${{ github.event.inputs.qt_version }}-minimal.tar.gz Qt6-built/
           ls -lh qt*-minimal.tar.gz
-      
+
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
@@ -170,7 +170,7 @@ jobs:
             - CPU optimizations: -O3 (generic x86_64)
             - Build: -release -optimize-size
             - Prefix: /home/runner/Qt6-built
-            
+
             Note: For native Zen 3 optimizations, rebuild locally with:
             export CFLAGS="-O3 -march=native -mtune=native"
         env:
