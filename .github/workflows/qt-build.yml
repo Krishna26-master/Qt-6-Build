@@ -23,7 +23,6 @@ jobs:
           VERSION="${{ github.event.inputs.qt_version }}"
           MAJOR_MINOR="${VERSION%.*}"
           BASE_URL="https://download.qt.io/official_releases/qt/$MAJOR_MINOR/$VERSION/submodules"
-          
           mkdir -p qt-sources
           cd qt-sources
           for mod in qtbase qtdeclarative qtwayland qtsvg qtshadertools; do
@@ -36,23 +35,14 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            build-essential cmake ninja-build \
-            libgl1-mesa-dev libxcb1-dev libxcb-xinput-dev \
-            libxkbcommon-dev libxkbcommon-x11-dev libx11-xcb-dev libegl1 \
-            libinput-dev libudev-dev libdbus-1-dev \
-            libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libpng-dev libjpeg-dev
+          sudo apt-get install -y build-essential cmake ninja-build libgl1-mesa-dev libxcb1-dev libxcb-xinput-dev libxkbcommon-dev libxkbcommon-x11-dev libx11-xcb-dev libegl1 libinput-dev libudev-dev libdbus-1-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libpng-dev libjpeg-dev
       - name: Build Qt base
         run: |
           VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qtbase-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          ./configure \
-            -prefix $RUNNER_TEMP/Qt6-built \
-            -release -optimize-size -no-widgets \
-            -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-mimer \
-            -no-dbus -no-openssl
+          ./configure -prefix $RUNNER_TEMP/Qt6-built -release -optimize-size -no-widgets -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-mimer -no-dbus -no-openssl
           cmake --build . --parallel
           cmake --install .
       - name: Build Qt declarative
@@ -95,6 +85,7 @@ jobs:
         run: |
           cd $RUNNER_TEMP
           tar -czf qt${{ github.event.inputs.qt_version }}-minimal.tar.gz Qt6-built/
+          cp qt${{ github.event.inputs.qt_version }}-minimal.tar.gz ${{ github.workspace }}/
           ls -lh qt*-minimal.tar.gz
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
