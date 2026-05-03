@@ -30,7 +30,7 @@ jobs:
         run: |
           MODULES="qtbase qtdeclarative qtwayland qtsvg qttools qtshadertools"
           VERSION="${{ github.event.inputs.qt_version }}"
-          BASE_URL="https://download.qt.io/official_releases/qt/$VERSION/$VERSION/submodules"
+          BASE_URL="https://download.qt.io/official_releases/qt/$VERSION/submodules"
           
           mkdir -p qt-sources
           cd qt-sources
