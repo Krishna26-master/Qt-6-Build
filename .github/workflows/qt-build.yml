@@ -96,17 +96,8 @@ jobs:
           cd $RUNNER_TEMP
           tar -czf qt${{ github.event.inputs.qt_version }}-minimal.tar.gz Qt6-built/
           ls -lh qt*-minimal.tar.gz
-      - name: Upload to Release
-        uses: softprops/action-gh-release@v2
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
-          files: qt${{ github.event.inputs.qt_version }}-minimal.tar.gz
-          tag_name: v${{ github.event.inputs.qt_version }}
-          name: Qt ${{ github.event.inputs.qt_version }} Build
-          body: |
-            Minimal Qt build for Linux x86_64
-            - Qt: ${{ github.event.inputs.qt_version }}
-            - Built on: Ubuntu 24.04 LTS
-            - Modules: qtbase, qtdeclarative, qtwayland, qtsvg, qtshadertools
-            - Optimizations: -O3 -pipe
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          name: qt${{ github.event.inputs.qt_version }}-minimal.tar.gz
+          path: qt${{ github.event.inputs.qt_version }}-minimal.tar.gz
