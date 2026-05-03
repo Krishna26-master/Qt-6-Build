@@ -11,11 +11,6 @@ on:
           - '6.8.3'
           - '6.8.2'
           - '6.8.1'
-      modules:
-        description: 'Modules to build (comma-separated)'
-        required: true
-        default: 'qtbase,qtdeclarative,qtwayland,qtsvg,qttools,qtshadertools'
-        type: string
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -37,20 +32,16 @@ jobs:
             echo "Downloading $mod..."
             curl -sL -o "${mod}-everywhere-src-$VERSION.tar.xz" "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
             if file "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null | grep -q "XZ compressed"; then
-              echo "✓ $mod downloaded"
+              echo "  ok"
             else
-              echo "✗ Failed: $mod"
-              ls -la "$mod"-everywhere-src-"$VERSION".tar.xz 2>/dev/null || true
+              echo "  FAILED"
               exit 1
             fi
           done
-          ls -la
       - name: Extract sources
         run: |
           cd qt-sources
-          for f in qt*-everywhere-src-*.tar.xz; do
-            tar -xf "$f"
-          done
+          for f in qt*-everywhere-src-*.tar.xz; do tar -xf "$f"; done
           ls -la
       - name: Install system dependencies
         run: |
@@ -64,14 +55,18 @@ jobs:
             libinput-dev libudev-dev \
             libdbus-1-dev \
             libfontconfig1-dev libfreetype6-dev \
-            libharfbuzz-dev libpng-dev libjpeg-dev
+            libharfbuzz-dev libpng-dev libjpeg-dev \
+            libclang-17-dev
+      - name: Remove broken LLVM config
+        run: |
+          # Prevent Qt from finding broken libclang
+          sudo rm -f /usr/lib/llvm-17/lib/cmake/clang/ClangTargets.cmake 2>/dev/null || true
       - name: Build Qt base
         run: |
           VERSION="${{ github.event.inputs.qt_version }}"
           cd qt-sources/qtbase-everywhere-src-$VERSION
           export CFLAGS="-O3 -pipe"
           export CXXFLAGS="-O3 -pipe"
-          export QT_GCC_BUILD_OPTIMIZE="3"
           ./configure \
             -prefix $RUNNER_TEMP/Qt6-built \
             -release -optimize-size -no-widgets \
