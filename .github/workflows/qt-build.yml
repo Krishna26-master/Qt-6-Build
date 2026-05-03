@@ -21,34 +21,54 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: Download Qt sources
+
+- name: Download Qt sources
         run: |
-          MODULES="qtbase qtdeclarative qtwayland qtsvg qttools qtshadertools"
           VERSION="${{ github.event.inputs.qt_version }}"
           BASE_URL="https://download.qt.io/official_releases/qt/$VERSION/submodules"
           
           mkdir -p qt-sources
           cd qt-sources
           
-          for mod in $MODULES; do
+          echo "Downloading Qt $VERSION modules..."
+          for mod in qtbase qtdeclarative qtwayland qtsvg qttools qtshadertools; do
             echo "Downloading $mod..."
-            curl -sL -O "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
+            curl -sL -o "${mod}-everywhere-src-$VERSION.tar.xz" "$BASE_URL/${mod}-everywhere-src-$VERSION.tar.xz"
+            # Verify download succeeded (not an error page)
+            if file "$mod"-everywhere-src-"$VERSION".tar.xz | grep -q "XZ compressed"; then
+              echo "✓ $mod downloaded successfully"
+            else
+              echo "✗ Failed to download $mod"
+              cat "$mod"-everywhere-src-"$VERSION".tar.xz | head -5
+              exit 1
+            fi
           done
-      
+          
+          ls -la
+
       - name: Extract sources
         run: |
           cd qt-sources
-          for f in *.tar.xz; do
+          echo "Extracting sources..."
+          for f in qt*-everywhere-src-*.tar.xz; do
             echo "Extracting $f..."
             tar -xf "$f"
           done
           ls -la
-      
+          echo "Verifying extracted directories..."
+          for dir in qt*-everywhere-src-*; do
+            if [ -d "$dir" ]; then
+              echo "✓ $dir extracted"
+            else
+              echo "✗ $dir not found"
+              exit 1
+            fi
+          done
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
@@ -71,13 +91,13 @@ jobs:
             libharfbuzz-dev \
             libpng-dev \
             libjpeg-dev
-      
+
       - name: Build Qt base
         run: |
           cd qt-sources/qtbase-everywhere-src-*
           # CPU optimizations (generic x86_64 for GitHub, use -march=native locally)
-          export CFLAGS="-O3 -pipe"
-export CXXFLAGS="-O3 -pipe"
+export CFLAGS="-O3 -pipe"
+          export CXXFLAGS="-O3 -pipe"
           export QT_GCC_BUILD_OPTIMIZE="3"
           ./configure \
             -prefix $RUNNER_TEMP/Qt6-built \
@@ -95,7 +115,7 @@ export CXXFLAGS="-O3 -pipe"
             -no-openssl
           cmake --build . --parallel
           cmake --install .
-      
+
       - name: Build Qt declarative
         run: |
           cd qt-sources/qtdeclarative-everywhere-src-*
@@ -106,7 +126,7 @@ export CXXFLAGS="-O3 -pipe"
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt wayland
         run: |
           cd qt-sources/qtwayland-everywhere-src-*
@@ -117,7 +137,7 @@ export CXXFLAGS="-O3 -pipe"
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt svg
         run: |
           cd qt-sources/qtsvg-everywhere-src-*
@@ -128,7 +148,7 @@ export CXXFLAGS="-O3 -pipe"
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt tools
         run: |
           cd qt-sources/qttools-everywhere-src-*
@@ -139,7 +159,7 @@ export CXXFLAGS="-O3 -pipe"
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Build Qt shadertools
         run: |
           cd qt-sources/qtshadertools-everywhere-src-*
@@ -150,13 +170,13 @@ export CXXFLAGS="-O3 -pipe"
             -B build -S .
           cmake --build build --parallel
           cmake --install build
-      
+
       - name: Package Qt
         run: |
           cd $RUNNER_TEMP
           tar -cvzf qt${{ github.event.inputs.qt_version }}-minimal.tar.gz Qt6-built/
           ls -lh qt*-minimal.tar.gz
-      
+
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
@@ -170,7 +190,7 @@ export CXXFLAGS="-O3 -pipe"
             - CPU optimizations: -O3 (generic x86_64)
             - Build: -release -optimize-size
             - Prefix: /home/runner/Qt6-built
-            
+
             Note: For native Zen 3 optimizations, rebuild locally with:
             export CFLAGS="-O3 -march=native -mtune=native"
         env:
