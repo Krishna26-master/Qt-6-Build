@@ -1,0 +1,303 @@
+#EXTM3U
+#EXTINF:-1 group-title="KashurStb KashurStb Yupptv" tvg-id="19" tvg-chno="19" tvg-name="Republic TV" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/usnsgu.png",19 Republic TV
+https://vg-republictvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/575d72be-86b2-4bb7-bd33-419fdff282e7/playlist.m3u8?hdnts=st=1793791660~exp=1793813260~acl=!*/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/575d72be-86b2-4bb7-bd33-419fdff282e7/*!/payload/yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_19_-1/*~data=yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_19_-1~hmac=92de0bc5be8356949864abe5da45e1cf52cb4798ce0329f2773851c83e45e80d&ads.network_name=yuppfast&ads.app_store_url=&ads.app_bundle=&ads.content_livestream=1&ads.content_genre=NEWS&ads.channel_name=RepublicTV&ads.language=ENG&ads.user=0
+#EXTINF:-1 group-title="KashurStb KashurStb Yupptv" tvg-id="249" tvg-chno="249" tvg-name="India Today" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/fkszrn.png",249 India Today
+https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/master.m3u8?hdnts=st=1793791661~exp=1793813261~acl=!*/vglive-sk-293160/*!/payload/yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_249_-1/*~data=yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_249_-1~hmac=3b9194cb7085e27975198784a7278899d66a692c201e9e46db1184a9fee861f8&ads.network_name=yuppfast&ads.app_store_url=&ads.app_bundle=&ads.content_livestream=1&ads.content_genre=NEWS&ads.channel_name=IndiaToday&ads.language=ENG&ads.user=0
+#EXTINF:-1 group-title="KashurStb KashurStb Yupptv" tvg-id="194" tvg-chno="194" tvg-name="DD INDIA" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/dd-india.png",194 DD INDIA
+https://d2gvyg6lvauoko.cloudfront.net/230226/ddindia/playlist.m3u8?ads.channel=5521&ads.content_custom_1_param=FAST&ads.user=2&ads.content_custom_3_param=YuppFastIndia&hdnts=st=1793791662~exp=1793813262~acl=!*/230226/ddindia/*!/payload/yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_194_-1/*~data=yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_194_-1~hmac=dcfc622d3c134296614b257f2c0231709f59089fae64bc45d22a59076b6b964d&ads.network_name=yuppfast&ads.app_store_url=&ads.app_bundle=&ads.content_livestream=1&ads.content_genre=NEWS&ads.channel_name=DDINDIA&ads.language=ENG&ads.user=0
+#EXTINF:-1 group-title="KashurStb KashurStb Yupptv" tvg-id="78" tvg-chno="78" tvg-name="Scifi World" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/oxsgsi.png",78 Scifi World
+https://sofast-yupptv.vgcdn.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/a985e052-6868-4365-ac45-52afe9008b25/manifest.m3u8?ads.channel=6599&ads.content_custom_1_param=FAST&ads.user=2&ads.content_custom_3_param=YuppFastIndia&hdnts=st=1793791668~exp=1793813268~acl=!*/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/a985e052-6868-4365-ac45-52afe9008b25/*!/payload/yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_78_-1/*~data=yupptvott_5_-1_3b6f5839-0b53-aa06-7a80-023047a6357c_US_20.169.72.4_yuppfast_2_channel_78_-1~hmac=f22a70ad51b7eeb94079157f8b1571bae9975021ba7b752e27aad113ecd49cba&ads.network_name=yuppfast&ads.app_store_url=&ads.app_bundle=&ads.content_livestream=1&ads.content_genre=ENTERTAINMENT&ads.channel_name=ScifiWorld&ads.language=ENG&ads.user=0
+#EXTINF:-1 tvg-id="ss2_hindi_hd" tvg-name="SS2 Hindi HD" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-8301-j7hc0820-v1/imageContent-8301-j7hc0820-m1.png" group-title="KashurStb KashurStb ⛨ 𝔼𝕩𝕥𝕣𝕒 | BIGG BOSS 24/7",SS2 Hindi HD
+https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8?hdntl=exp=1793842441~acl=%2f*~id=5fe719faee4dc5b4d4af456b6d9fab62~data=hdntl~hmac=f7a9937e8cf3edc88ae763f4339c852eaafc9e6217e1801a6f73a0ecb821e0bb
+#EXTINF:-1 tvg-id="ss2_hindi_sd" tvg-name="SS2 Hindi SD" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-8301-j7hc0820-v1/imageContent-8301-j7hc0820-m1.png" group-title="KashurStb KashurStb ⛨ 𝔼𝕩𝕥𝕣𝕒 | BIGG BOSS 24/7",SS2 Hindi SD
+https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8?hdntl=exp=1793842441~acl=%2f*~id=5fe719faee4dc5b4d4af456b6d9fab62~data=hdntl~hmac=f7a9937e8cf3edc88ae763f4339c852eaafc9e6217e1801a6f73a0ecb821e0bb
+#EXTINF:-1 tvg-id="1132" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Plus_HD.png" group-title="KashurStb Entertainment",Star Plus HD
+https://hjh-545.pages.dev/stream?id=starplushd
+#EXTINF:-1 tvg-id="1116" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Plus.png" group-title="KashurStb Entertainment",Star Plus
+https://hjh-545.pages.dev/stream?id=starplus
+#EXTINF:-1 tvg-id="931" tvg-logo="https://img.media.jio.com/tvpimages/60/42/302087_1753199814927_l_medium.jpg" group-title="KashurStb Entertainment",Star Bharat HD
+https://hjh-545.pages.dev/stream?id=starbharathd
+#EXTINF:-1 tvg-id="1127" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Bharat.png" group-title="KashurStb Entertainment",Star Bharat
+https://hjh-545.pages.dev/stream?id=starbharat
+#EXTINF:-1 tvg-id="144" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ColorsHD.png" group-title="KashurStb Entertainment",Colors HD
+https://hjh-545.pages.dev/stream?id=colorshd
+#EXTINF:-1 tvg-id="1368" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_SD.png" group-title="KashurStb Entertainment",Colors
+https://hjh-545.pages.dev/stream?id=colors
+#EXTINF:-1 tvg-id="151" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Movies_Now_HD.png" group-title="KashurStb English",Movies Now HD
+https://hjh-545.pages.dev/stream?id=moviesnowhd
+#EXTINF:-1 tvg-id="156" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold_HD.png" group-title="KashurStb Movies",Star Gold HD
+https://hjh-545.pages.dev/stream?id=stargoldhd
+#EXTINF:-1 tvg-id="1125" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold.png" group-title="KashurStb Movies",Star Gold
+https://hjh-545.pages.dev/stream?id=stargold
+#EXTINF:-1 tvg-id="3096" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold_2_HD.png" group-title="KashurStb Movies",Star Gold 2 HD
+https://hjh-545.pages.dev/stream?id=stargold2hd
+#EXTINF:-1 tvg-id="1154" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold_2.png" group-title="KashurStb Movies",Star Gold 2
+https://hjh-545.pages.dev/stream?id=stargold2
+#EXTINF:-1 tvg-id="165" tvg-logo="https://img.media.jio.com/tvpimages/76/6/300330_1768289569650_l_medium.jpg" group-title="KashurStb Movies",Zee Cinema HD
+https://hjh-545.pages.dev/stream?id=zeecinemahd
+#EXTINF:-1 tvg-id="415" tvg-logo="https://img.media.jio.com/tvpimages/57/61/300309_1750315631111_l_medium.jpg" group-title="KashurStb Movies",Zee Anmol Cinema
+https://hjh-545.pages.dev/stream?id=zeeanmolcinema
+#EXTINF:-1 tvg-id="484" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeCinema.png" group-title="KashurStb Movies",Zee Cinema
+https://hjh-545.pages.dev/stream?id=zeecinema
+#EXTINF:-1 tvg-id="167" tvg-logo="https://img.media.jio.com/tvpimages/66/3/300378_1753869902174_l_medium.jpg" group-title="KashurStb Entertainment",Zee TV HD
+https://hjh-545.pages.dev/stream?id=zeetvhd
+#EXTINF:-1 tvg-id="1351" tvg-logo="https://img.media.jio.com/tvpimages/85/63/300396_1768460644560_l_medium.jpg" group-title="KashurStb Entertainment",Zee TV
+https://hjh-545.pages.dev/stream?id=zeetv
+#EXTINF:-1 tvg-id="173" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Aaj_Tak.png" group-title="KashurStb News",Aaj Tak
+https://hjh-545.pages.dev/stream?id=aajtak
+#EXTINF:-1 tvg-id="175" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Aastha.png" group-title="KashurStb Devotional",Aastha
+https://hjh-545.pages.dev/stream?id=aastha
+#EXTINF:-1 tvg-id="177" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ABP_News_India.png" group-title="KashurStb News",ABP News India
+https://hjh-545.pages.dev/stream?id=abpnewsindia
+#EXTINF:-1 tvg-id="182" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/b4u_movies.png" group-title="KashurStb Movies",B4U Movies
+https://hjh-545.pages.dev/stream?id=b4umovies
+#EXTINF:-1 tvg-id="1839" tvg-logo="https://img.media.jio.com/tvpimages/57/85/300328_1768298228357_l_medium.jpg" group-title="KashurStb Movies",&Pictures HD
+https://hjh-545.pages.dev/stream?id=pictureshd
+#EXTINF:-1 tvg-id="185" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/AndPictures.png" group-title="KashurStb Movies",& Pictures
+https://hjh-545.pages.dev/stream?id=pictures
+#EXTINF:-1 tvg-id="1496" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNBC_Awaaz_NW18.png" group-title="KashurStb News",CNBC Awaaz.
+https://hjh-545.pages.dev/stream?id=cnbcawaaz
+#EXTINF:-1 tvg-id="202" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_National.png" group-title="KashurStb Entertainment",DD National
+https://hjh-545.pages.dev/stream?id=ddnational
+#EXTINF:-1 tvg-id="203" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_News.png" group-title="KashurStb News",DD News
+https://hjh-545.pages.dev/stream?id=ddnews
+#EXTINF:-1 tvg-id="235" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/India_TV.png" group-title="KashurStb News",India TV
+https://hjh-545.pages.dev/stream?id=indiatv
+#EXTINF:-1 tvg-id="255" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/NDTV_24x7.png" group-title="KashurStb English",NDTV 24x7
+https://hjh-545.pages.dev/stream?id=ndtv24x7
+#EXTINF:-1 tvg-id="258" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/NDTV_India.png" group-title="KashurStb News",NDTV India
+https://hjh-545.pages.dev/stream?id=ndtvindia
+#EXTINF:-1 tvg-id="259" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/NDTV_Profit.png" group-title="KashurStb Business News",NDTV Profit
+https://hjh-545.pages.dev/stream?id=ndtvprofit
+#EXTINF:-1 tvg-id="279" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ColorsRishtey.png" group-title="KashurStb Entertainment",Colors Rishtey
+https://hjh-545.pages.dev/stream?id=colorsrishtey
+#EXTINF:-1 tvg-id="288" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sanskar.png" group-title="KashurStb Devotional",Sanskar
+https://hjh-545.pages.dev/stream?id=sanskar
+#EXTINF:-1 tvg-id="291" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sony_SD.png" group-title="KashurStb Entertainment",SET
+https://hjh-545.pages.dev/stream?id=set
+#EXTINF:-1 tvg-id="1396" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_HD.png" group-title="KashurStb Entertainment",SET HD
+https://hjh-545.pages.dev/stream?id=sethd
+#EXTINF:-1 tvg-id="383" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Times_NOW.png" group-title="KashurStb English",Times NOW
+https://hjh-545.pages.dev/stream?id=timesnow
+#EXTINF:-1 tvg-id="471" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonySAB.png" group-title="KashurStb Entertainment",Sony SAB HD
+https://hjh-545.pages.dev/stream?id=sonysabhd
+#EXTINF:-1 tvg-id="154" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sony_SAB.png" group-title="KashurStb Entertainment",Sony SAB
+https://hjh-545.pages.dev/stream?id=sonysab
+#EXTINF:-1 tvg-id="472" tvg-logo="https://img.media.jio.com/tvpimages/65/85/300377_1753869832519_l_medium.jpg" group-title="KashurStb Entertainment",&TV HD
+https://hjh-545.pages.dev/stream?id=tvhd
+#EXTINF:-1 tvg-id="473" tvg-logo="https://img.media.jio.com/tvpimages/45/13/300327_1753870425423_l_medium.jpg" group-title="KashurStb Entertainment",Anmol TV
+https://hjh-545.pages.dev/stream?id=anmoltv
+#EXTINF:-1 tvg-id="474" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyPAL.png" group-title="KashurStb Entertainment",Sony Pal
+https://hjh-545.pages.dev/stream?id=sonypal
+#EXTINF:-1 tvg-id="476" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyMAX.png" group-title="KashurStb Movies",Sony Max HD
+https://hjh-545.pages.dev/stream?id=sonymaxhd
+#EXTINF:-1 tvg-id="289" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Max_SD.png" group-title="KashurStb Movies",Sony Max
+https://hjh-545.pages.dev/stream?id=sonymax
+#EXTINF:-1 tvg-id="479" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TLCHDEnglish.png" group-title="KashurStb English",TLC HD English
+https://hjh-545.pages.dev/stream?id=tlchdenglish
+#EXTINF:-1 tvg-id="482" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Cineplex.png" group-title="KashurStb Movies",Colors Cineplex
+https://hjh-545.pages.dev/stream?id=colorscineplex
+#EXTINF:-1 tvg-id="483" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyMAX2.png" group-title="KashurStb Movies",Sony MAX2
+https://hjh-545.pages.dev/stream?id=sonymax2
+#EXTINF:-1 tvg-id="487" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeBollywood.png" group-title="KashurStb Movies",Zee Bollywood
+https://hjh-545.pages.dev/stream?id=zeebollywood
+#EXTINF:-1 tvg-id="488" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeAction.png" group-title="KashurStb Movies",Zee Action
+https://hjh-545.pages.dev/stream?id=zeeaction
+#EXTINF:-1 tvg-id="1495" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNBC_TV18_NW18.png" group-title="KashurStb News",CNBC TV18.
+https://hjh-545.pages.dev/stream?id=cnbctv18
+#EXTINF:-1 tvg-id="1498" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNN_News18_NW18.png" group-title="KashurStb News",CNN News18.
+https://hjh-545.pages.dev/stream?id=cnnnews18
+#EXTINF:-1 tvg-id="495" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/News_X.png" group-title="KashurStb English",News X
+https://hjh-545.pages.dev/stream?id=newsx
+#EXTINF:-1 tvg-id="496" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/dw.png" group-title="KashurStb English",dw
+https://hjh-545.pages.dev/stream?id=dw
+#EXTINF:-1 tvg-id="498" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/India_news.png" group-title="KashurStb News",India news
+https://hjh-545.pages.dev/stream?id=indianews
+#EXTINF:-1 tvg-id="499" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/News_Nation.png" group-title="KashurStb News",News Nation
+https://hjh-545.pages.dev/stream?id=newsnation
+#EXTINF:-1 tvg-id="501" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/News_24.png" group-title="KashurStb News",News 24
+https://hjh-545.pages.dev/stream?id=news24
+#EXTINF:-1 tvg-id="502" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Tez.png" group-title="KashurStb News",Good News Today
+https://hjh-545.pages.dev/stream?id=goodnewstoday
+#EXTINF:-1 tvg-id="503" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/IBC-24.png" group-title="KashurStb News",IBC24
+https://hjh-545.pages.dev/stream?id=ibc24
+#EXTINF:-1 tvg-id="504" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_News.png" group-title="KashurStb News",Zee News
+https://hjh-545.pages.dev/stream?id=zeenews
+#EXTINF:-1 tvg-id="528" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_India.png" group-title="KashurStb Entertainment",DD India
+https://hjh-545.pages.dev/stream?id=ddindia
+#EXTINF:-1 tvg-id="544" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_Junior.png" group-title="KashurStb English",Nick Junior
+https://hjh-545.pages.dev/stream?id=nickjunior
+#EXTINF:-1 tvg-id="545" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_Hindi.png" group-title="KashurStb Kids",Nick Hindi
+https://hjh-545.pages.dev/stream?id=nickhindi
+#EXTINF:-1 tvg-id="554" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DiscoveryKidsHin.png" group-title="KashurStb Kids",Discovery Kids Hindi
+https://hjh-545.pages.dev/stream?id=discoverykidshindi
+#EXTINF:-1 tvg-id="571" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TLCHindi.png" group-title="KashurStb Lifestyle",TLC Hindi
+https://hjh-545.pages.dev/stream?id=tlchindi
+#EXTINF:-1 tvg-id="593" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sadhna.png" group-title="KashurStb Devotional",Sadhna
+https://hjh-545.pages.dev/stream?id=sadhna
+#EXTINF:-1 tvg-id="594" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Aastha_Bhajan.png" group-title="KashurStb Devotional",Aastha Bhajan
+https://hjh-545.pages.dev/stream?id=aasthabhajan
+#EXTINF:-1 tvg-id="597" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Satsang_TV.png" group-title="KashurStb Devotional",Satsang TV
+https://hjh-545.pages.dev/stream?id=satsangtv
+#EXTINF:-1 tvg-id="599" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Disha_tv.png" group-title="KashurStb Devotional",Disha tv
+https://hjh-545.pages.dev/stream?id=dishatv
+#EXTINF:-1 tvg-id="601" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ishwar_TV.png" group-title="KashurStb Devotional",Ishwar TV
+https://hjh-545.pages.dev/stream?id=ishwartv
+#EXTINF:-1 tvg-id="611" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Darshan_24.png" group-title="KashurStb Devotional",Darshan 24
+https://hjh-545.pages.dev/stream?id=darshan24
+#EXTINF:-1 tvg-id="657" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Business.png" group-title="KashurStb Business News",Zee Business
+https://hjh-545.pages.dev/stream?id=zeebusiness
+#EXTINF:-1 tvg-id="762" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyPIX.png" group-title="KashurStb English",Sony Pix HD
+https://hjh-545.pages.dev/stream?id=sonypixhd
+#EXTINF:-1 tvg-id="794" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Peace_of_Mind.png" group-title="KashurStb Devotional",Peace of Mind
+https://hjh-545.pages.dev/stream?id=peaceofmind
+#EXTINF:-1 tvg-id="809" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maha_Movies.png" group-title="KashurStb Movies",Maha Movies
+https://hjh-545.pages.dev/stream?id=mahamovies
+#EXTINF:-1 tvg-id="815" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/sonic_Hindi.png" group-title="KashurStb Kids",Sonic Hindi
+https://hjh-545.pages.dev/stream?id=sonichindi
+#EXTINF:-1 tvg-id="816" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNHindi.png" group-title="KashurStb Kids",Cartoon Network Hindi
+https://hjh-545.pages.dev/stream?id=cartoonnetworkhindi
+#EXTINF:-1 tvg-id="858" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Republic_TV.png" group-title="KashurStb English",Republic TV
+https://hjh-545.pages.dev/stream?id=republictv
+#EXTINF:-1 tvg-id="866" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Exclusive.png" group-title="KashurStb English",Jio Exclusive HD
+https://hjh-545.pages.dev/stream?id=jioexclusivehd
+#EXTINF:-1 tvg-id="872" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyYAYHin.png" group-title="KashurStb Kids",Sony Yay Hindi
+https://hjh-545.pages.dev/stream?id=sonyyayhindi
+#EXTINF:-1 tvg-id="876" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Times_Now_HD.png" group-title="KashurStb English",Times Now World
+https://hjh-545.pages.dev/stream?id=timesnowworld
+#EXTINF:-1 tvg-id="889" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Sports.png" group-title="KashurStb Sports",Jio Sports HD
+https://hjh-545.pages.dev/stream?id=jiosportshd
+#EXTINF:-1 tvg-id="963" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Arre.png" group-title="KashurStb Entertainment",Arre HD
+https://hjh-545.pages.dev/stream?id=arrehd
+#EXTINF:-1 tvg-id="978" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TEST1_HD.png" group-title="KashurStb Entertainment",TEST1 HD
+https://hjh-545.pages.dev/stream?id=test1hd
+#EXTINF:-1 tvg-id="979" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TEST2_HD.png" group-title="KashurStb Entertainment",TEST2 HD
+https://hjh-545.pages.dev/stream?id=test2hd
+#EXTINF:-1 tvg-id="1119" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold_Select.png" group-title="KashurStb Movies",Star Gold Select
+https://hjh-545.pages.dev/stream?id=stargoldselect
+#EXTINF:-1 tvg-id="1113" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold_Select_HD.png" group-title="KashurStb Movies",Star Gold Select HD
+https://hjh-545.pages.dev/stream?id=stargoldselecthd
+#EXTINF:-1 tvg-id="3543" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/blywcm.png" group-title="KashurStb Movies",Eros Universe Bollywood Cinema
+https://hjh-545.pages.dev/stream?id=erosuniversebollywoodcinema
+#EXTINF:-1 tvg-id="3544" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ersent.png" group-title="KashurStb Movies",Eros Universe Entertainment
+https://hjh-545.pages.dev/stream?id=erosuniverseentertainment
+#EXTINF:-1 tvg-id="001" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/36/Dangalv2.png" group-title="KashurStb Entertainment",Dangal
+https://hjh-545.pages.dev/stream?id=dangal
+#EXTINF:-1 tvg-id="002" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/ac/Dangal_2.png" group-title="KashurStb Entertainment",Dangal 2
+https://hjh-545.pages.dev/stream?id=dangal2
+#EXTINF:-1 tvg-id="1136" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Utsav_Movies.png" group-title="KashurStb Entertainment",Star Utsav Movies
+https://hjh-545.pages.dev/stream?id=starutsavmovies
+#EXTINF:-1 tvg-id="1143" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Utsav.png" group-title="KashurStb Entertainment",Star Utsav
+https://hjh-545.pages.dev/stream?id=starutsav
+#EXTINF:-1 tvg-id="1193" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Hare_Krsna_music.png" group-title="KashurStb Devotional",Hare Krsna Music
+https://hjh-545.pages.dev/stream?id=harekrsnamusic
+#EXTINF:-1 tvg-id="1212" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Hare_Krsna_Pravachan.png" group-title="KashurStb Devotional",Hare Krsna Pravachan
+https://hjh-545.pages.dev/stream?id=harekrsnapravachan
+#EXTINF:-1 tvg-id="1226" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_HD_Plus.png" group-title="KashurStb Kids",Nick HD+
+https://hjh-545.pages.dev/stream?id=nickhd
+#EXTINF:-1 tvg-id="1295" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/B4U_Kadak.png" group-title="KashurStb Movies",B4U Kadak
+https://hjh-545.pages.dev/stream?id=b4ukadak
+#EXTINF:-1 tvg-id="1328" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_Arunprabha.png" group-title="KashurStb Entertainment",DD Arunprabha
+https://hjh-545.pages.dev/stream?id=ddarunprabha
+#EXTINF:-1 tvg-id="1329" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_Gyandarshan.png" group-title="KashurStb Entertainment",DD Gyandarshan
+https://hjh-545.pages.dev/stream?id=ddgyandarshan
+#EXTINF:-1 tvg-id="1359" tvg-logo="https://img.media.jio.com/tvpimages/61/11/300311_1768460697282_l_medium.jpg" group-title="KashurStb Entertainment",Big Magic
+https://hjh-545.pages.dev/stream?id=bigmagic
+#EXTINF:-1 tvg-id="1373" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Disney_Channel.png" group-title="KashurStb Kids",Disney Channel
+https://hjh-545.pages.dev/stream?id=disneychannel
+#EXTINF:-1 tvg-id="1375" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Disney_International_HD.png" group-title="KashurStb Kids",Disney International HD
+https://hjh-545.pages.dev/stream?id=disneyinternationalhd
+#EXTINF:-1 tvg-id="1391" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Hungama.png" group-title="KashurStb Kids",Hungama
+https://hjh-545.pages.dev/stream?id=hungama
+#EXTINF:-1 tvg-id="1392" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Super_Hungama.png" group-title="KashurStb Kids",Super Hungama
+https://hjh-545.pages.dev/stream?id=superhungama
+#EXTINF:-1 tvg-id="1393" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyWAH.png" group-title="KashurStb Entertainment",Sony Wah
+https://hjh-545.pages.dev/stream?id=sonywah
+#EXTINF:-1 tvg-id="1403" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Republic_Bharat.png" group-title="KashurStb News",Republic Bharat
+https://hjh-545.pages.dev/stream?id=republicbharat
+#EXTINF:-1 tvg-id="1431" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/BBC_Hindi.png" group-title="KashurStb News",BBC News Hindi
+https://hjh-545.pages.dev/stream?id=bbcnewshindi
+#EXTINF:-1 tvg-id="1450" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ColorsCineplexSuperhit.png" group-title="KashurStb Movies",Colors Cineplex Superhits
+https://hjh-545.pages.dev/stream?id=colorscineplexsuperhits
+#EXTINF:-1 tvg-id="1476" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TEST12_HD.png" group-title="KashurStb Entertainment",TEST12 HD
+https://hjh-545.pages.dev/stream?id=test12hd
+#EXTINF:-1 tvg-id="1477" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ColorsCineplexHD.png" group-title="KashurStb Movies",Colors Cineplex HD
+https://hjh-545.pages.dev/stream?id=colorscineplexhd
+#EXTINF:-1 tvg-id="1497" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNBC_Bajar_NW18.png" group-title="KashurStb Business News",CNBC Bazaar.
+https://hjh-545.pages.dev/stream?id=cnbcbazaar
+#EXTINF:-1 tvg-id="1531" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gyanvani_1.png" group-title="KashurStb Educational",Gyanvani 1
+https://hjh-545.pages.dev/stream?id=gyanvani1
+#EXTINF:-1 tvg-id="300322" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/&xplorHD.png" group-title="KashurStb Entertainment",&xplor HD
+https://hjh-545.pages.dev/stream?id=xplorhd
+#EXTINF:-1 tvg-id="1691" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeClassicSD.png" group-title="KashurStb Movies",Zee Classic
+https://hjh-545.pages.dev/stream?id=zeeclassic
+#EXTINF:-1 tvg-id="8001" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/b8/Goldmines_Bollywood.jpg" group-title="KashurStb Movies",Goldmines Bollywood
+https://hjh-545.pages.dev/stream?id=goldminesbollywood
+#EXTINF:-1 tvg-id="1005" tvg-logo="https://upload.wikimedia.org/wikipedia/en/6/68/Goldmines.jpg" group-title="KashurStb Movies",Goldmines
+https://hjh-545.pages.dev/stream?id=goldmines
+#EXTINF:-1 tvg-id="0150" tvg-logo="https://i.postimg.cc/tTJMDJ95/Goldmines2.png" group-title="KashurStb Movies",Goldmines 2
+https://hjh-545.pages.dev/stream?id=goldmines2
+#EXTINF:-1 tvg-id="0254" tvg-logo="https://yt3.googleusercontent.com/_X6U6bMLF-pTu5wBMFwsSI6aubGrXk2B0kUKdGiLIMqFLyDIne4Ot4ro76BS1S8fX3pWcCwS=s900-c-k-c0x00ffffff-no-rj" group-title="KashurStb Movies",Goldmines Action
+https://hjh-545.pages.dev/stream?id=goldminesaction
+#EXTINF:-1 tvg-id="1763" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ColorsCineplexBollywood.png" group-title="KashurStb Movies",Colors Cineplex Bollywood
+https://hjh-545.pages.dev/stream?id=colorscineplexbollywood
+#EXTINF:-1 tvg-id="1834" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Green_Chillies_TV.png" group-title="KashurStb Entertainment",Green Chillies
+https://hjh-545.pages.dev/stream?id=greenchillies
+#EXTINF:-1 tvg-id="1847" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Harpal_TV.png" group-title="KashurStb Devotional",Z10 TV
+https://hjh-545.pages.dev/stream?id=z10tv
+#EXTINF:-1 tvg-id="1856" tvg-logo="https://img.media.jio.com/imagespublic/33/6/301472_1687780356503_p_medium.jpg" group-title="KashurStb Movies",Prathamkhabar24x7
+https://hjh-545.pages.dev/stream?id=prathamkhabar24x7
+#EXTINF:-1 tvg-id="1961" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Shemaroo_TV.png" group-title="KashurStb Entertainment",Shemaroo TV
+https://hjh-545.pages.dev/stream?id=shemarootv
+#EXTINF:-1 tvg-id="1967" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/PMC_Hindi.png" group-title="KashurStb Devotional",PMC Hindi
+https://hjh-545.pages.dev/stream?id=pmchindi
+#EXTINF:-1 tvg-id="1108" tvg-logo="https://img.media.jio.com/tvpimages/5/6/301982_1749665314605_l_medium.jpg" group-title="KashurStb Sports",Star Sports 1 Hindi HD
+https://hjh-545.pages.dev/stream?id=starsports1hindihd
+#EXTINF:-1 tvg-id="362" tvg-logo="https://img.media.jio.com/tvpimages/13/81/302112_1749665154709_l_medium.jpg" group-title="KashurStb Sports",Star Sports 1 Hindi
+https://hjh-545.pages.dev/stream?id=starsports1hindi
+#EXTINF:-1 tvg-id="1984" tvg-logo="https://img.media.jio.com/tvpimages/56/36/301229_1742214332015_l_medium.jpg" group-title="KashurStb Sports",Star Sports 2 Hindi HD
+https://hjh-545.pages.dev/stream?id=starsports2hindihd
+#EXTINF:-1 tvg-id="1985" tvg-logo="https://img.media.jio.com/tvpimages/57/17/302124_1749130246443_l_medium.jpg" group-title="KashurStb Sports",Star Sports 2 Hindi
+https://hjh-545.pages.dev/stream?id=starsports2hindi
+#EXTINF:-1 tvg-id="1998" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/StarSportsKhel.png" group-title="KashurStb Sports",Star Sports Khel
+https://hjh-545.pages.dev/stream?id=starsportskhel
+#EXTINF:-1 tvg-id="2077" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gangaur.png" group-title="KashurStb Entertainment",Gangaur
+https://hjh-545.pages.dev/stream?id=gangaur
+#EXTINF:-1 tvg-id="2078" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Shemaroo_Umang.png" group-title="KashurStb Entertainment",Shemaroo Umang
+https://hjh-545.pages.dev/stream?id=shemarooumang
+#EXTINF:-1 tvg-id="2258" tvg-logo="https://img.media.jio.com/imagespublic/57/24/301325_1674217631954_p_medium.jpg" group-title="KashurStb Entertainment",Animax
+https://hjh-545.pages.dev/stream?id=animax
+#EXTINF:-1 tvg-id="2322" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Divyalok_TV.png" group-title="KashurStb Devotional",Divyalok TV
+https://hjh-545.pages.dev/stream?id=divyaloktv
+#EXTINF:-1 tvg-id="2352" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Narikaa.png" group-title="KashurStb Educational",Narikaa
+https://hjh-545.pages.dev/stream?id=narikaa
+#EXTINF:-1 tvg-id="2757" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Zest_HD.png" group-title="KashurStb Movies",Zee Zest HD
+https://hjh-545.pages.dev/stream?id=zeezesthd
+#EXTINF:-1 tvg-id="2761" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeAnmolCinema2.png" group-title="KashurStb Movies",Zee Anmol Cinema 2
+https://hjh-545.pages.dev/stream?id=zeeanmolcinema2
+#EXTINF:-1 tvg-id="2784" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ISKCON_Bangalore.png" group-title="KashurStb Devotional",ISKCON Bangalore
+https://hjh-545.pages.dev/stream?id=iskconbangalore
+#EXTINF:-1 tvg-id="3022" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Unique_Tv.png" group-title="KashurStb Entertainment",Unique TV
+https://hjh-545.pages.dev/stream?id=uniquetv
+#EXTINF:-1 tvg-id="3028" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/BHStyle_Icon.png" group-title="KashurStb Entertainment",BH OTT India Fest
+https://hjh-545.pages.dev/stream?id=bhottindiafest
+#EXTINF:-1 tvg-id="3060" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Hiff_Movies.png" group-title="KashurStb Movies",Hiff Movies
+https://hjh-545.pages.dev/stream?id=hiffmovies
+#EXTINF:-1 tvg-id="3075" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/smrbol.png" group-title="KashurStb Movies",Shemaroo Bollywood
+https://hjh-545.pages.dev/stream?id=shemaroobollywood
+#EXTINF:-1 tvg-id="3097" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold_Romance.png" group-title="KashurStb Movies",Star Gold Romance
+https://hjh-545.pages.dev/stream?id=stargoldromance
+#EXTINF:-1 tvg-id="3098" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Gold_Thrills.png" group-title="KashurStb Movies",Star Gold Thrills
+https://hjh-545.pages.dev/stream?id=stargoldthrills
+#EXTINF:-1 tvg-id="3223" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SharkTankIndia.png" group-title="KashurStb Entertainment",Shark Tank India S5
+https://hjh-545.pages.dev/stream?id=sharktankindias5
+#EXTINF:-1 tvg-id="3336" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/blyflx.png" group-title="KashurStb Movies",NH BollyFlix
+https://hjh-545.pages.dev/stream?id=nhbollyflix
+#EXTINF:-1 tvg-id="892" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten3_HD.png" group-title="KashurStb Sports",Sony Ten 3 HD Hindi
+https://hjh-545.pages.dev/stream?id=sonyten3hdhindi
+#EXTINF:-1 tvg-id="3418" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyMAX1.png" group-title="KashurStb Movies",Sony MAX1
+https://hjh-545.pages.dev/stream?id=sonymax1
+#EXTINF:-1 tvg-id="3436" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/CNHDHindi.png" group-title="KashurStb Kids",Cartoon Network HD+ Hindi
+https://hjh-545.pages.dev/stream?id=cartoonnetworkhdhindi
+#EXTINF:-1 tvg-id="3458" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TLCHDHindi.png" group-title="KashurStb Lifestyle",TLC HD Hindi
+https://hjh-545.pages.dev/stream?id=tlchdhindi
